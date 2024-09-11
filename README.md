@@ -3,3 +3,5 @@
 
 Para usar é só trocar o caminho dos arquivos na main, sendo primeiro a DLL e segundo o executável. 
 Para confirmar que funcionou pode-se usar um debugger ou simplesmente escrever uma função DLLMain na DLL e tratar os casos de PROCESS_ATTACH e PROCEESS_DETACH. 
+
+Só funciona em casos onde o processo-alvo já tem importado a biblioteca kernel32.dll (absoluta maioria), pois é ela que possui a função LoadLibraryA. 
