@@ -51,7 +51,8 @@ int Inject_DLL(char* pathdll, char* exe_name) {
     return TRUE;
 }
 
-int main() {
-    Inject_DLL("mylib.dll", "msgbox.exe");
+int main(int argc, char *argv[] ) {
+	if (argc < 3) return 1;
+    Inject_DLL(argv[1], argv[2]);
     return 0;
 }
